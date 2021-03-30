@@ -29,13 +29,13 @@ error(nargoutchk(0, 1, nargout))%correct number of output arguements??
 %Take care of the anomolies
 if NumberOfPlots<1
     ColorSet=[];
-elseif NumberOfPlots==1
-    ColorSet=[0 1 0];
-elseif NumberOfPlots==2
-    ColorSet=[0 1 0; 0 1 1];
-elseif NumberOfPlots==3
-    ColorSet=[0 1 0; 0 1 1; 0 0 1];
-elseif NumberOfPlots==4
+elseif NumberOfPlots==1 % HL revised: default is blue RGB
+    ColorSet=[0 0 1];
+elseif NumberOfPlots==2 % b vs r
+    ColorSet=[0 0 1; 1 0 0];
+elseif NumberOfPlots==3 %
+    ColorSet=[0 0 1; 1 0 0; 0 1 0];
+elseif NumberOfPlots==4 %
     ColorSet=[0 1 0; 0 1 1; 0 0 1; 1 0 1];
 elseif NumberOfPlots==5
     ColorSet=[0 1 0; 0 1 1; 0 0 1; 1 0 1; 1 0 0];
